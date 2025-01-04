@@ -36,74 +36,6 @@ header {
     cursor: pointer;
 }
 
-/* Style du main */
-main {
-    padding: 20px;
-}
-
-/* Style du footer */
-footer {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 10px 0;
-}
-.nouvelle-seance {
-    position: fixed;
-    bottom: 20px;  /* Espacement depuis le bas de la page */
-    right: 20px;  /* Espacement depuis la droite de la page */
-    width: 5cm;
-    height: 3cm;
-    border: 2px solid black;  /* Contour noir */
-    background-color: white;  /* Fond blanc */
-    display: flex;
-    justify-content: center;  /* Centrer horizontalement le texte */
-    align-items: center;  /* Centrer verticalement le texte */
-    font-size: 16px;  /* Taille du texte */
-    font-weight: bold;  /* Texte en gras */
-}
-
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style du header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    height: 2cm;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-left h1 {
-    margin: 0;
-    color: #00BFFF;  /* Bleu ciel */
-}
-
-/* Style du lien retour accueil */
-.header-right img {
-    height: 2cm;
-    cursor: pointer;
-}
-
-/* Style du main */
-main {
-    padding: 20px;
-}
-
-/* Style du footer */
-footer {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 10px 0;
-}
-
 /* Style de la barre rétractable */
 .side-bar {
     position: fixed;
@@ -133,3 +65,49 @@ footer {
 .side-bar:hover .search-bar {
     display: block;
 }
+
+/* Style des pages de type trieur */
+.page-trieur {
+    position: relative;
+    margin-left: 2cm;
+}
+
+.page {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#fiche-renseignement {
+    margin-top: 20px;  /* Espace entre la barre et la première page */
+}
+
+#fiche-renseignement h2,
+#fiche-suivi h2,
+#suivi-performances h2 {
+    margin: 0;
+    background-color: #00BFFF;  /* Bleu ciel */
+    padding: 10px;
+    border-radius: 8px 8px 0 0;  /* Arrondir le haut */
+    color: white;
+    text-align: center;
+}
+
+.nouvelle-seance {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 5cm;
+    height: 3cm;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
