@@ -61,3 +61,61 @@ footer {
     font-size: 16px;  /* Taille du texte */
     font-weight: bold;  /* Texte en gras */
 }
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    height: 2cm;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left h1 {
+    margin: 0;
+    color: #00BFFF;  /* Bleu ciel */
+}
+
+/* Style du lien retour accueil */
+.header-right img {
+    height: 2cm;
+    cursor: pointer;
+}
+
+/* Style du main */
+main {
+    padding: 20px;
+}
+
+/* Style du footer */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style du rectangle "Nouvelle séance" */
+.nouvelle-seance {
+    position: fixed;
+    bottom: 20px;  /* Espacement depuis le bas de la page */
+    right: 20px;  /* Espacement depuis la droite de la page */
+    width: 5cm;
+    height: 3cm;
+    border: 2px solid black;  /* Contour noir */
+    background-color: white;  /* Fond blanc */
+    display: flex;
+    justify-content: center;  /* Centrer horizontalement le texte */
+    align-items: center;  /* Centrer verticalement le texte */
+    font-size: 16px;  /* Taille du texte */
+    font-weight: bold;  /* Texte en gras */
+    cursor: pointer;  /* Changer le curseur en pointeur au survol */
+}
