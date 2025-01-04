@@ -102,20 +102,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
-/* Style du rectangle "Nouvelle séance" */
-.nouvelle-seance {
-    position: fixed;
-    bottom: 20px;  /* Espacement depuis le bas de la page */
-    right: 20px;  /* Espacement depuis la droite de la page */
-    width: 5cm;
-    height: 3cm;
-    border: 2px solid black;  /* Contour noir */
-    background-color: white;  /* Fond blanc */
-    display: flex;
-    justify-content: center;  /* Centrer horizontalement le texte */
-    align-items: center;  /* Centrer verticalement le texte */
-    font-size: 16px;  /* Taille du texte */
-    font-weight: bold;  /* Texte en gras */
-    cursor: pointer;  /* Changer le curseur en pointeur au survol */
-}
