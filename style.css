@@ -102,3 +102,75 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    height: 2cm;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left h1 {
+    margin: 0;
+    color: #00BFFF;  /* Bleu ciel */
+}
+
+/* Style du lien retour accueil */
+.header-right img {
+    height: 2cm;
+    cursor: pointer;
+}
+
+/* Style du main */
+main {
+    padding: 20px;
+}
+
+/* Style du footer */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style de la barre rétractable */
+.side-bar {
+    position: fixed;
+    top: 2cm;  /* En dessous de l'entête */
+    left: 0;
+    width: 2cm;
+    height: 100%;
+    background-color: #00BFFF;  /* Bleu ciel */
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.side-bar:hover {
+    width: 6cm;
+}
+
+/* Style de la barre de recherche */
+.search-bar {
+    display: none;
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.side-bar:hover .search-bar {
+    display: block;
+}
