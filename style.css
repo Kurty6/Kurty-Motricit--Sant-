@@ -53,6 +53,14 @@ header {
     width: 6cm;
 }
 
+.side-bar:hover .search-bar {
+    display: block;
+}
+
+.side-bar:hover .nouvelle-seance {
+    display: block;
+}
+
 /* Style de la barre de recherche */
 .search-bar {
     display: none;
@@ -61,10 +69,6 @@ header {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.side-bar:hover .search-bar {
-    display: block;
 }
 
 /* Style des boutons de la barre rétractable */
@@ -134,4 +138,5 @@ footer {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    display: none;
 }
