@@ -128,9 +128,12 @@ header {
 
 /* Style du footer */
 footer {
-    background-color: #f0f0f0;
+    background-color: #00BFFF; /* Same color as "ANTS S.P.O.R.T" */
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    bottom: 4cm; /* 4 cm from the bottom */
+    width: 100%;
 }
 
 /* Nouvelle séance */
