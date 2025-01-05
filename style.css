@@ -140,10 +140,12 @@ header {
 footer {
     background-color: #00BFFF; /* Same color as "ANTS S.P.O.R.T" */
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0; /* Adjust padding to fit within 0.5 cm */
     position: fixed;
-    bottom: 4cm; /* 4 cm from the bottom */
+    bottom: 0; /* Position at the very bottom */
+    height: 0.5cm; /* Set height to 0.5 cm */
     width: 100%;
+    font-size: 10px; /* Make the text smaller */
 }
 
 /* Nouvelle séance */
