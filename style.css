@@ -10,7 +10,7 @@ h1 {
 /* Style général */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: white; /* Le body est blanc */
     margin: 0;
     padding: 0;
 }
@@ -57,7 +57,7 @@ header {
 .search-bar {
     display: none;
     width: calc(100% - 20px);
-    margin: 10px;
+    margin: 50px 10px 10px 10px; /* Baisser la barre de recherche */
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -65,6 +65,18 @@ header {
 
 .side-bar:hover .search-bar {
     display: block;
+}
+
+/* Style des boutons de la barre rétractable */
+.accordion {
+    background-color: #00BFFF;  /* Bleu ciel */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
 }
 
 /* Style des boutons d'onglets */
@@ -97,6 +109,7 @@ header {
 
 .tab-content.active {
     display: block;
+    margin-left: 2cm; /* Ne pas afficher au centre */
 }
 
 /* Style du footer */
