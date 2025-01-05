@@ -1,42 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Le site est chargé !");
-});
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/A EFFACER 1pa3wBesb1MuUYiaFOdzSbjaTKor7FcN8vp8fWb9cskA/values/Fiche de renseignements?key=AIzaSyCFgsSrevhLarhUPfjOkKnhTw41jQAoVDA')
-    .then(response => response.json())
-    .then(data => {
-        let container = document.getElementById('data-container');
-        data.values.forEach(row => {
-            let rowData = document.createElement('p');
-            rowData.textContent = row.join(', ');
-            container.appendChild(rowData);
+    function showTab(tabId) {
+        // Masquer tout le contenu des onglets
+        document.querySelectorAll('.tab-content').forEach(function(tabContent) {
+            tabContent.style.display = 'none';
         });
-    })
-    .catch(error => console.error('Erreur:', error));
-});
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/{1pa3wBesb1MuUYiaFOdzSbjaTKor7FcN8vp8fWb9cskA}/values/{Fiche de suivi 2025}?key={AIzaSyCFgsSrevhLarhUPfjOkKnhTw41jQAoVDA}')
-    .then(response => response.json())
-    .then(data => {
-        let container = document.getElementById('data-container');
-        data.values.forEach(row => {
-            let rowData = document.createElement('p');
-            rowData.textContent = row.join(', ');
-            container.appendChild(rowData);
-        });
-    })
-    .catch(error => console.error('Erreur:', error));
-});
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/{1pa3wBesb1MuUYiaFOdzSbjaTKor7FcN8vp8fWb9cskA}/values/{Valeurs}?key={AIzaSyCFgsSrevhLarhUPfjOkKnhTw41jQAoVDA}')
-    .then(response => response.json())
-    .then(data => {
-        let container = document.getElementById('data-container');
-        data.values.forEach(row => {
-            let rowData = document.createElement('p');
-            rowData.textContent = row.join(', ');
-            container.appendChild(rowData);
-        });
-    })
-    .catch(error => console.error('Erreur:', error));
+        
+        // Afficher le contenu de l'onglet sélectionné
+        document.getElementById(tabId).style.display = 'block';
+    }
+
+    // Afficher l'onglet par défaut (Fiche de renseignement)
+    showTab('fiche-renseignement');
 });
