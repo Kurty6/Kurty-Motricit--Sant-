@@ -83,27 +83,6 @@ header {
     font-size: 14px;
 }
 
-/* Style des boutons d'onglets */
-.tabs {
-    display: flex;
-    margin-left: 2cm;
-    background-color: #00BFFF;
-}
-
-.tab-button {
-    background-color: #00BFFF;  /* Bleu ciel */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 0 2px;
-    transition: background-color 0.3s;
-}
-
-.tab-button:hover {
-    background-color: #008CBA;  /* Légèrement plus foncé au survol */
-}
 
 /* Style des fiches */
 .tab-content {
@@ -151,6 +130,15 @@ footer {
     top: 2cm;
     left: 2cm;
     right: 0;
-    height: 0.67cm; /* One-third of the original height */
-    line-height: 0.67cm; /* Adjust line-height to center text vertically */
+    height: 0.44cm; /* Two-thirds of the previous one-third height */
+    line-height: 0.44cm; /* Adjust line-height to center text vertically */
+}
+
+/* Style des boutons d'onglets */
+.tabs {
+    display: flex;
+    margin-left: 2cm;
+    background-color: #00BFFF;
+    top: 2.44cm; /* Align with the bottom of the banner */
+    position: absolute; /* Ensure the tabs are positioned correctly */
 }
