@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showAdhesionPage() {
         document.querySelector('.tabs').style.display = 'flex';
+        showTab('fiche-renseignement');
         showBanner("Nouvelle adhésion");
     }
 
