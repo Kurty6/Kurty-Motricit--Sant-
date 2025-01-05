@@ -39,5 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Afficher l'onglet par défaut (Fiche de renseignement)
-    showTab('fiche-renseignement');
+    document.querySelector('.tab-button').addEventListener('click', function() {
+        showTab('fiche-renseignement');
+    });
 });
