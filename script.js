@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('.tab-content').forEach(function(tabContent) {
             tabContent.style.display = 'none';
         });
-        
+
         // Afficher le contenu de l'onglet sélectionné
         document.getElementById(tabId).style.display = 'block';
-        
+
         // Check if the tabId is 'fiche-suivi' and display the table
         if (tabId === 'fiche-suivi') {
             displayTable();
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const tableContainer = document.getElementById('fiche-suivi');
         const table = document.createElement('table');
         const headerRow = document.createElement('tr');
-        
+
         // Create 19 columns
         for (let i = 0; i < 19; i++) {
             const th = document.createElement('th');
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             headerRow.appendChild(th);
         }
         table.appendChild(headerRow);
-        
+
         // Create 3 rows
         for (let i = 0; i < 3; i++) {
             const row = document.createElement('tr');
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             table.appendChild(row);
         }
-        
+
         // Clear any existing content and append the table
         tableContainer.innerHTML = '';
         tableContainer.appendChild(table);
@@ -73,8 +73,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Afficher l'onglet par défaut (Fiche de renseignement)
-    document.querySelector('.tab-button').addEventListener('click', function() {
-        showTab('fiche-renseignement');
+    document.querySelectorAll('.tab-button').forEach(function(button) {
+        button.addEventListener('click', function() {
+            showTab(button.getAttribute('onclick').match(/'([^']+)'/)[1]);
+        });
     });
 
     // Gestion de la barre de recherche
