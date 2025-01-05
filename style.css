@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -24,11 +25,15 @@ header {
     padding: 10px 20px;
     height: 2cm;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure it stays below the sidebar */
+    z-index: 1; /* Ensure header is below the sidebar */
 }
 
 .header-left h1 {
     margin: 0;
     color: #00BFFF;  /* Bleu ciel */
+    position: relative;
+    left: 2cm; /* Shift 2cm to the right */
 }
 
 /* Style du lien retour accueil */
@@ -40,13 +45,14 @@ header {
 /* Style de la barre rétractable */
 .side-bar {
     position: fixed;
-    top: 2cm;  /* En dessous de l'entête */
+    top: 0;  /* Start from the top */
     left: 0;
     width: 2cm;
     height: 100%;
     background-color: #00BFFF;  /* Bleu ciel */
     overflow: hidden;
     transition: width 0.3s;
+    z-index: 2; /* Ensure sidebar is above the header */
 }
 
 .side-bar:hover {
