@@ -140,3 +140,17 @@ footer {
     cursor: pointer;
     display: none;
 }
+
+/* Style de la banderolle */
+.banner {
+    background-color: #00BFFF; /* Bleu ciel */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 2cm;
+    left: 2cm;
+    right: 0;
+    height: 2cm;
+    line-height: 2cm;
+}
