@@ -8,13 +8,18 @@ body {
 }
 
 header {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 10px 0;
+    height: 2cm; /* Hauteur de l'entête */
+    display: flex;
+    justify-content: flex-end; /* Aligne le texte à droite */
+    align-items: center; /* Centre verticalement */
 }
 
 header h1 {
     margin: 0;
-    color: #333;
+    color: #00BFFF; /* Bleu ciel */
+    padding-right: 20px; /* Espace à droite */
 }
 
 main {
