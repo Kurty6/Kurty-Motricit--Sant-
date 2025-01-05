@@ -59,6 +59,16 @@ header {
     width: 6cm;
 }
 
+/* Hide the "Nouvelle adhésion" button by default */
+.side-bar .accordion {
+    display: none;
+}
+
+/* Show the "Nouvelle adhésion" button when the sidebar is fully extended */
+.side-bar:hover .accordion {
+    display: block;
+}
+
 /* Style de la barre de recherche */
 .search-bar {
     display: none;
