@@ -18,15 +18,15 @@
         <input type="text" id="searchBar" placeholder="Rechercher..." style="margin-top: 20px;">
     </div>
     <div id="banner" class="banner" style="display: none;"></div>
-    <div class="tabs" style="display: none;">
+    <div class="tabs">
         <button class="tab-button" onclick="showTab('fiche-renseignement')">Fiche de renseignement</button>
         <button class="tab-button" onclick="showTab('fiche-suivi')">Fiche de suivi</button>
         <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
     </div>
     <main>
-        <section id="fiche-renseignement" class="tab-content" style="display: none;">
+        <section id="fiche-renseignement" class="tab-content">
             <h2>Fiche de renseignement</h2>
-            <form class="form-container">
+            <form>
                 <h3>1/ Informations personnelles</h3>
                 <label for="nomPrenom">Nom/Prénom:</label>
                 <input type="text" id="nomPrenom" name="nomPrenom"><br>
@@ -48,7 +48,7 @@
                 <input type="text" id="facteursContextuels" name="facteursContextuels"><br>
                 <label for="autresInfo">Autres info (contre-indications, points d'attention):</label>
                 <input type="text" id="autresInfo" name="autresInfo"><br>
-
+                
                 <h3>2/ Rapport à l'APA</h3>
                 <label for="dateArrivee">Date d'arrivée à l'association:</label>
                 <input type="date" id="dateArrivee" name="dateArrivee"><br>
@@ -62,68 +62,11 @@
                 <input type="text" id="passeSportif" name="passeSportif"><br>
                 <label for="pratiqueAPA">Pratique APA avant/maintenant ?:</label>
                 <input type="text" id="pratiqueAPA" name="pratiqueAPA"><br>
-
-                <h3>3/ Objectifs</h3>
-                <label for="objectifInitial">Objectif initial:</label>
-                <input type="text" id="objectifInitial" name="objectifInitial"><br>
-                <label for="objectifsBiologiques">Biologique(s):</label>
-                <input type="text" id="objectifsBiologiques" name="objectifsBiologiques"><br>
-                <label for="objectifsPsychologiques">Psychologique(s):</label>
-                <input type="text" id="objectifsPsychologiques" name="objectifsPsychologiques"><br>
-                <label for="objectifsSociaux">Social(aux):</label>
-                <input type="text" id="objectifsSociaux" name="objectifsSociaux"><br>
-
-                <h3>4/ Pratique</h3>
-                <label for="disponibilites">Principales disponibilités:</label>
-                <input type="text" id="disponibilites" name="disponibilites"><br>
-                <label for="activitesChoisies">Activité(s) choisie(s):</label>
-                <input type="text" id="activitesChoisies" name="activitesChoisies"><br>
-                <label for="certificatMedical">Certificat médical pour électrostimulation:</label>
-                <input type="text" id="certificatMedical" name="certificatMedical"><br>
-                <label for="zonesSollicitees">Principales zones sollicitées:</label>
-                <input type="text" id="zonesSollicitees" name="zonesSollicitees"><br>
-
-                <h3>5/ Tests physiques</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Muscles</th>
-                            <th>Recrutement</th>
-                            <th>Force</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Membres supérieurs</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Deltoïde G</td>
-                            <td>
-                                <select name="recrutement-deltoide-g">
-                                    <option value="OUI">OUI</option>
-                                    <option value="NON">NON</option>
-                                    <option value="PARTIEL">PARTIEL</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="force-deltoide-g">
-                                    <option value="X">X</option>
-                                    <option value="Faible">Faible</option>
-                                    <option value="Moyenne">Moyenne</option>
-                                    <option value="Elevée">Elevée</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <!-- Repeat similar rows for each muscle -->
-                    </tbody>
-                </table>
             </form>
         </section>
         <section id="fiche-suivi" class="tab-content" style="display:none;">
             <h2>Fiche de suivi</h2>
-            <!-- Container for the table -->
+            <!-- Contenu de la fiche de suivi -->
         </section>
         <section id="suivi-performances" class="tab-content" style="display:none;">
             <h2>Suivi des performances</h2>
