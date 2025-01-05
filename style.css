@@ -27,10 +27,19 @@ main {
 }
 
 footer {
-    background-color: #f0f0f0;
-    padding: 10px 0;
+    background-color: #ffffff; /* Couleur blanche */
+    height: 0.5cm; /* Hauteur de 0,5 cm */
+    display: flex;
+    align-items: center; /* Centrer verticalement le texte */
+    justify-content: center; /* Centrer horizontalement le texte */
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+footer p {
+    color: #00BFFF; /* Bleu ciel */
+    font-size: 10px; /* Plus petite taille de police */
+    margin: 0; /* Supprime la marge par défaut */
 }
