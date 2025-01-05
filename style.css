@@ -95,7 +95,7 @@ header {
     vertical-align: top;
 }
 
-.mindmap-section input {
+.mindmap-section input, .mindmap-section select {
     margin-bottom: 10px;
 }
 
@@ -107,4 +107,15 @@ header {
 }
 
 .tab-button {
-    background-color: #00B
+    background-color: #00BFFF;  /* Bleu ciel */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 2px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #008CBA;  /* Légèrement plus foncé au sur
