@@ -119,6 +119,13 @@ header {
     margin-left: 3cm; /* Align horizontally 3 cm from the left edge */
 }
 
+/* Align the questionnaire 1 cm to the right of the retracted sidebar */
+.form-container {
+    position: absolute;
+    left: calc(2cm + 1cm); /* 2 cm for the sidebar width, plus 1 cm */
+    width: calc(100% - 3cm); /* Adjust width accordingly */
+}
+
 /* Style du footer */
 footer {
     background-color: #f0f0f0;
