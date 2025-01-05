@@ -3,7 +3,6 @@ body {
     text-align: center;
     background-color: #f0f0f0;
 }
-
 h1 {
     color: #333;
 }
@@ -82,6 +81,28 @@ header {
     text-align: left;
     outline: none;
     font-size: 14px;
+}
+
+/* Style des boutons d'onglets */
+.tabs {
+    display: flex;
+    margin-left: 2cm;
+    background-color: #00BFFF;
+}
+
+.tab-button {
+    background-color: #00BFFF;  /* Bleu ciel */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 2px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #008CBA;  /* Légèrement plus foncé au survol */
 }
 
 /* Style des fiches */
