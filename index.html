@@ -19,3 +19,96 @@
             <h2>Bienvenue sur ANTS S.P.O.R.T TOOL</h2>
             <form id="newSessionForm" class="form-container">
                 <label for="nomAdherent">Nom de l'adhérant:</label>
+                <input list="adherents" id="nomAdherent" name="nomAdherent">
+                <datalist id="adherents">
+                    <!-- Les noms des adhérants seront dynamiquement remplis ici -->
+                </datalist><br>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date"><br>
+                
+                <label for="activite">Activité:</label>
+                <input list="activites" id="activite" name="activite">
+                <datalist id="activites">
+                    <option value="Echauffement">
+                    <option value="Marche">
+                    <option value="Vélo électrostimulation">
+                    <option value="Vélo sans électrostimulation">
+                    <option value="Cross-training">
+                    <option value="Musculation">
+                    <option value="Verticalisation">
+                    <option value="Mobilité articulaire/étirements">
+                    <option value="Relaxation">
+                    <option value="Sophrologie">
+                    <option value="Circuit training sangle abdominale">
+                    <option value="Circuit training membres sup">
+                    <option value="Circuit training membres inf">
+                    <option value="Coordination/équilibre/double tâche">
+                </datalist><br>
+                
+                <label for="exercice">Exercice:</label>
+                <input list="exercices" id="exercice" name="exercice">
+                <datalist id="exercices">
+                    <option value="Rameur">
+                    <option value="Maindalier">
+                    <option value="Planche sur genoux">
+                    <option value="Gainage planche">
+                    <option value="Planche touche épaules">
+                    <option value="Planche mountain climbers (genoux)">
+                    <option value="Gainage dynamique">
+                    <!-- Ajouter toutes les autres options ici -->
+                </datalist><br>
+                
+                <label for="zone">Zone (principaux muscles ciblés):</label>
+                <input list="zones" id="zone" name="zone">
+                <datalist id="zones">
+                    <option value="Global">
+                    <option value="Tronc">
+                    <option value="Membres inférieur">
+                    <option value="Membres supérieur">
+                    <!-- Ajouter toutes les autres options ici -->
+                </datalist><br>
+                
+                <label for="materiel">Matériel:</label>
+                <input list="materiels" id="materiel" name="materiel">
+                <datalist id="materiels">
+                    <option value="Sans matériel">
+                    <option value="Harnais">
+                    <option value="Tapis roulant">
+                    <!-- Ajouter toutes les autres options ici -->
+                </datalist><br>
+                
+                <label for="regime">Régime de contraction et type d'effort:</label>
+                <input list="regimes" id="regime" name="regime">
+                <datalist id="regimes">
+                    <option value="Intermittent concentrique/excentrique">
+                    <option value="Intermittent isométrique (gainage)">
+                    <!-- Ajouter toutes les autres options ici -->
+                </datalist><br>
+                
+                <label for="chargeG">Charge (kg) / résistance G:</label>
+                <input list="chargesG" id="chargeG" name="chargeG">
+                <datalist id="chargesG">
+                    <option value="R0">
+                    <option value="R1">
+                    <!-- Ajouter toutes les autres options ici -->
+                </datalist><br>
+                
+                <label for="chargeD">Charge (kg) / résistance D:</label>
+                <input list="chargesD" id="chargeD" name="chargeD">
+                <datalist id="chargesD">
+                    <option value="R0">
+                    <option value="R1">
+                    <!-- Ajouter toutes les autres options ici -->
+                </datalist><br>
+                
+                <button type="submit">Soumettre</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ANTS S.P.O.R.T TOOL. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
