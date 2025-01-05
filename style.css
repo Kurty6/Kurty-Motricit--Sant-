@@ -7,7 +7,7 @@ h1 {
     color: #333;
 }
 
- /* Style général */
+/* Style général */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -67,34 +67,36 @@ header {
     display: block;
 }
 
-/* Style des liens de navigation */
-.nav-links {
-    display: none;
-    margin-top: 20px;
-}
-
-.side-bar:hover .nav-links {
-    display: block;
-}
-
-.nav-links a {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
-    color: white;
+/* Style des boutons d'onglets */
+.tabs {
+    display: flex;
+    margin-left: 2cm;
     background-color: #00BFFF;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 12px;  /* Plus petit texte */
 }
 
-.nav-links a:hover {
+.tab-button {
+    background-color: #00BFFF;  /* Bleu ciel */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 2px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
     background-color: #008CBA;  /* Légèrement plus foncé au survol */
 }
 
-/* Style du main */
-main {
+/* Style des fiches */
+.tab-content {
+    display: none;
     padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 /* Style du footer */
@@ -104,6 +106,7 @@ footer {
     padding: 10px 0;
 }
 
+/* Nouvelle séance */
 .nouvelle-seance {
     position: fixed;
     bottom: 20px;
@@ -119,3 +122,4 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
