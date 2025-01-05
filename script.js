@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelector('.accordion').addEventListener('click', function() {
-        showAdhesionPage();
+        window.location.href = 'newPage.html'; // Replace with the actual URL of the new page
     });
 
     // Afficher l'onglet par défaut (Fiche de renseignement)
@@ -82,12 +82,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Gestion de la barre de recherche
     const sideBar = document.querySelector('.side-bar');
     const searchBar = document.getElementById('searchBar');
+    const adhesionButton = document.querySelector('.accordion');
 
     sideBar.addEventListener('mouseover', function() {
-        searchBar.style.display = 'block';
+        adhesionButton.style.display = 'block';
     });
 
     sideBar.addEventListener('mouseout', function() {
-        searchBar.style.display = 'none';
+        adhesionButton.style.display = 'none';
+    });
+
+    adhesionButton.addEventListener('click', function() {
+        showAdhesionPage();
     });
 });
