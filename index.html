@@ -18,13 +18,13 @@
         <input type="text" id="searchBar" placeholder="Rechercher..." style="margin-top: 20px;">
     </div>
     <div id="banner" class="banner" style="display: none;"></div>
-    <div class="tabs">
+    <div class="tabs" style="display: none;">
         <button class="tab-button" onclick="showTab('fiche-renseignement')">Fiche de renseignement</button>
         <button class="tab-button" onclick="showTab('fiche-suivi')">Fiche de suivi</button>
         <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
     </div>
     <main>
-        <section id="fiche-renseignement" class="tab-content">
+        <section id="fiche-renseignement" class="tab-content" style="display: none;">
             <h2>Fiche de renseignement</h2>
             <form>
                 <h3>1/ Informations personnelles</h3>
@@ -48,7 +48,7 @@
                 <input type="text" id="facteursContextuels" name="facteursContextuels"><br>
                 <label for="autresInfo">Autres info (contre-indications, points d'attention):</label>
                 <input type="text" id="autresInfo" name="autresInfo"><br>
-                
+
                 <h3>2/ Rapport à l'APA</h3>
                 <label for="dateArrivee">Date d'arrivée à l'association:</label>
                 <input type="date" id="dateArrivee" name="dateArrivee"><br>
@@ -62,6 +62,26 @@
                 <input type="text" id="passeSportif" name="passeSportif"><br>
                 <label for="pratiqueAPA">Pratique APA avant/maintenant ?:</label>
                 <input type="text" id="pratiqueAPA" name="pratiqueAPA"><br>
+
+                <h3>3/ Objectifs</h3>
+                <label for="objectifInitial">Objectif initial:</label>
+                <input type="text" id="objectifInitial" name="objectifInitial"><br>
+                <label for="objectifsBiologiques">Biologique(s):</label>
+                <input type="text" id="objectifsBiologiques" name="objectifsBiologiques"><br>
+                <label for="objectifsPsychologiques">Psychologique(s):</label>
+                <input type="text" id="objectifsPsychologiques" name="objectifsPsychologiques"><br>
+                <label for="objectifsSociaux">Social(aux):</label>
+                <input type="text" id="objectifsSociaux" name="objectifsSociaux"><br>
+
+                <h3>4/ Pratique</h3>
+                <label for="disponibilites">Principales disponibilités:</label>
+                <input type="text" id="disponibilites" name="disponibilites"><br>
+                <label for="activitesChoisies">Activité(s) choisie(s):</label>
+                <input type="text" id="activitesChoisies" name="activitesChoisies"><br>
+                <label for="certificatMedical">Certificat médical pour électrostimulation:</label>
+                <input type="text" id="certificatMedical" name="certificatMedical"><br>
+                <label for="zonesSollicitees">Principales zones sollicitées:</label>
+                <input type="text" id="zonesSollicitees" name="zonesSollicitees"><br>
             </form>
         </section>
         <section id="fiche-suivi" class="tab-content" style="display:none;">
