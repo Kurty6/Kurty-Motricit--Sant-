@@ -7,10 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showBanner(text) {
         const banner = document.getElementById('banner');
-        banner.innerHTML = `
-            <input type="text" id="searchBar" placeholder="Rechercher..." class="search-bar">
-            <button class="accordion" onclick="showTabs()">Nouvelle adhésion</button>
-        `;
+        banner.textContent = text;
         banner.style.display = 'block';
     }
 
@@ -27,17 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         handleSearchAndRedirect(this.value);
     });
 
-    document.querySelector('.accordion').addEventListener('click', function() {
-        window.location.href = 'fiche_suivi.html';
-    });
-
-    // Ensure the tabs and banner remain visible on any tab
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', function() {
-            document.querySelector('.tabs').style.display = 'flex';
-            document.querySelector('.banner').style.display = 'block';
-        });
-    });
+    document.querySelector('.accordion').addEventListener('click', showTabs);
 
     // Make the "Nouvelle séance" rectangle visible on the homepage
     document.querySelector('.nouvelle-seance').style.display = 'block';
