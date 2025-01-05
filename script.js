@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const table = document.createElement('table');
         const headerRow = document.createElement('tr');
         
-        // Create 19 columns
+        // Créer 19 colonnes
         for (let i = 0; i < 19; i++) {
             const th = document.createElement('th');
             th.textContent = `Colonne ${i + 1}`;
@@ -43,30 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         table.appendChild(headerRow);
         
-        // Create 3 rows
+        // Créer 3 lignes
         for (let i = 0; i < 3; i++) {
             const row = document.createElement('tr');
-            for (let j = 0; j < 19; j++) {
-                const td = document.createElement('td');
-                td.textContent = `Cell ${i + 1}-${j + 1}`;
-                row.appendChild(td);
-            }
-            table.appendChild(row);
-        }
-        
-        // Clear any existing content and append the table
-        tableContainer.innerHTML = '';
-        tableContainer.appendChild(table);
-    }
-
-    document.getElementById('searchBar').addEventListener('input', function() {
-        handleSearchAndRedirect(this.value);
-    });
-
-    document.querySelector('.accordion').addEventListener('click', function() {
-        showAdhesionPage();
-    });
-
-    // Afficher l'onglet par défaut (Fiche de renseignement)
-    showTab('fiche-renseignement');
-});
+            for (let j = 0;
