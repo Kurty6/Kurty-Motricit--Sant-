@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Afficher le contenu de l'onglet sélectionné
         document.getElementById(tabId).style.display = 'block';
+        
+        // Check if the tabId is 'fiche-suivi' and display the table
+        if (tabId === 'fiche-suivi') {
+            displayTable();
+        }
     }
 
     function showAdhesionPage() {
@@ -28,6 +33,35 @@ document.addEventListener("DOMContentLoaded", function() {
             showBanner(query);
             window.location.href = 'memberPage.html';
         }
+    }
+
+    function displayTable() {
+        const tableContainer = document.getElementById('fiche-suivi');
+        const table = document.createElement('table');
+        const headerRow = document.createElement('tr');
+        
+        // Create 19 columns
+        for (let i = 0; i < 19; i++) {
+            const th = document.createElement('th');
+            th.textContent = `Colonne ${i + 1}`;
+            headerRow.appendChild(th);
+        }
+        table.appendChild(headerRow);
+        
+        // Create 3 rows
+        for (let i = 0; i < 3; i++) {
+            const row = document.createElement('tr');
+            for (let j = 0; j < 19; j++) {
+                const td = document.createElement('td');
+                td.textContent = `Cell ${i + 1}-${j + 1}`;
+                row.appendChild(td);
+            }
+            table.appendChild(row);
+        }
+        
+        // Clear any existing content and append the table
+        tableContainer.innerHTML = '';
+        tableContainer.appendChild(table);
     }
 
     document.getElementById('searchBar').addEventListener('input', function() {
