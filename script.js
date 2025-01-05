@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function handleSearchAndRedirect(query) {
-        // Logique pour rechercher et rediriger vers la page de l'adhérant
-        // Exemple : Si le nom correspond à un adhérant
         if (query === "Nom de l'adhérant") {
             showBanner(query);
             window.location.href = 'memberPage.html';
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = 'fiche_suivi.html';
     });
 
-    // Ensure the tabs and banner remain visible on any tab
     document.querySelectorAll('.tab-button').forEach(button => {
         button.addEventListener('click', function() {
             document.querySelector('.tabs').style.display = 'flex';
@@ -39,6 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Make the "Nouvelle séance" rectangle visible on the homepage
     document.querySelector('.nouvelle-seance').style.display = 'block';
 });
