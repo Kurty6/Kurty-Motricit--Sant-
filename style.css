@@ -1,17 +1,7 @@
-/* Existing CSS */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
-}
-h1 {
-    color: #333;
-}
-
 /* Style général */
 body {
     font-family: Arial, sans-serif;
-    background-color: white; /* Le body est blanc */
+    background-color: #f0f0f0; 
     margin: 0;
     padding: 0;
 }
@@ -23,20 +13,15 @@ header {
     align-items: center;
     background-color: white;
     padding: 10px 20px;
-    height: 2cm;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure it stays below the sidebar */
-    z-index: 1; /* Ensure header is below the sidebar */
+    z-index: 1;
 }
 
 .header-left h1 {
     margin: 0;
-    color: #00BFFF;  /* Bleu ciel */
-    position: relative;
-    left: 2cm; /* Shift 2cm to the right */
+    color: #00BFFF;
 }
 
-/* Style du lien retour accueil */
 .header-right img {
     height: 2cm;
     cursor: pointer;
@@ -45,14 +30,14 @@ header {
 /* Style de la barre rétractable */
 .side-bar {
     position: fixed;
-    top: 0;  /* Start from the top */
+    top: 0;
     left: 0;
     width: 2cm;
     height: 100%;
-    background-color: #00BFFF;  /* Bleu ciel */
+    background-color: #00BFFF;
     overflow: hidden;
     transition: width 0.3s;
-    z-index: 2; /* Ensure sidebar is above the header */
+    z-index: 2;
 }
 
 .side-bar:hover {
@@ -63,7 +48,7 @@ header {
 .search-bar {
     display: none;
     width: calc(100% - 20px);
-    margin: 50px 10px 10px 10px; /* Baisser la barre de recherche */
+    margin: 50px 10px 10px 10px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -75,7 +60,7 @@ header {
 
 /* Style des boutons de la barre rétractable */
 .accordion {
-    background-color: #00BFFF;  /* Bleu ciel */
+    background-color: #00BFFF;
     border: none;
     color: white;
     padding: 10px;
@@ -93,7 +78,7 @@ header {
 }
 
 .tab-button {
-    background-color: #00BFFF;  /* Bleu ciel */
+    background-color: #00BFFF;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -104,7 +89,7 @@ header {
 }
 
 .tab-button:hover {
-    background-color: #008CBA;  /* Légèrement plus foncé au survol */
+    background-color: #008CBA;
 }
 
 /* Style des fiches */
@@ -115,7 +100,43 @@ header {
 
 .tab-content.active {
     display: block;
-    margin-left: 2cm; /* Ne pas afficher au centre */
+    margin-left: 2cm;
+}
+
+/* Style du formulaire */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #008CBA;
 }
 
 /* Style du footer */
@@ -123,21 +144,4 @@ footer {
     background-color: #f0f0f0;
     text-align: center;
     padding: 10px 0;
-}
-
-/* Nouvelle séance */
-.nouvelle-seance {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 5cm;
-    height: 3cm;
-    border: 2px solid black;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
 }
