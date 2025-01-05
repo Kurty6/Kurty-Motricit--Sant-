@@ -82,11 +82,48 @@
                 <input type="text" id="certificatMedical" name="certificatMedical"><br>
                 <label for="zonesSollicitees">Principales zones sollicitées:</label>
                 <input type="text" id="zonesSollicitees" name="zonesSollicitees"><br>
+
+                <h3>5/ Tests physiques</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Muscles</th>
+                            <th>Recrutement</th>
+                            <th>Force</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Membres supérieurs</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Deltoïde G</td>
+                            <td>
+                                <select name="recrutement-deltoide-g">
+                                    <option value="OUI">OUI</option>
+                                    <option value="NON">NON</option>
+                                    <option value="PARTIEL">PARTIEL</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="force-deltoide-g">
+                                    <option value="X">X</option>
+                                    <option value="Faible">Faible</option>
+                                    <option value="Moyenne">Moyenne</option>
+                                    <option value="Elevée">Elevée</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Repeat similar rows for each muscle -->
+                    </tbody>
+                </table>
             </form>
         </section>
         <section id="fiche-suivi" class="tab-content" style="display:none;">
             <h2>Fiche de suivi</h2>
-            <!-- Contenu de la fiche de suivi -->
+            <!-- Container for the table -->
         </section>
         <section id="suivi-performances" class="tab-content" style="display:none;">
             <h2>Suivi des performances</h2>
