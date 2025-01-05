@@ -43,3 +43,51 @@ footer p {
     font-size: 10px; /* Plus petite taille de police */
     margin: 0; /* Supprime la marge par défaut */
 }
+
+/* Style de la banderolle rétractable */
+.side-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0; /* Descend jusqu'en bas de la page */
+    left: 0;
+    width: 1.5cm; /* Largeur de la banderolle rétractée */
+    background-color: #00BFFF; /* Bleu ciel */
+    overflow: hidden;
+    transition: width 0.3s;
+    z-index: 2;
+}
+
+.side-bar:hover {
+    width: 6.5cm; /* Largeur lorsqu'elle est agrandie */
+}
+
+.search-bar {
+    display: none; /* Cacher par défaut */
+    width: calc(100% - 20px);
+    margin: 1.5cm 10px 0 10px; /* Position de la barre de recherche */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center; /* Centrer dans la barre */
+}
+
+.side-bar:hover .search-bar {
+    display: block; /* Afficher lorsqu'elle est agrandie */
+}
+
+.accordion {
+    display: none; /* Cacher par défaut */
+    background-color: #00BFFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    margin-top: 1.5cm; /* Position par rapport à la barre de recherche */
+}
+
+.side-bar:hover .accordion {
+    display: block; /* Afficher lorsqu'elle est agrandie */
+}
