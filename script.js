@@ -17,13 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    function showTabs() {
+        document.querySelector('.tabs').style.display = 'flex';
+        document.querySelector('.nouvelle-seance').style.display = 'block';
+    }
+
     document.getElementById('searchBar').addEventListener('input', function() {
         handleSearchAndRedirect(this.value);
     });
 
-    document.querySelector('.accordion').addEventListener('click', function() {
-        window.location.href = 'memberPage.html';
-    });
+    document.querySelector('.accordion').addEventListener('click', showTabs);
 
     // Afficher l'onglet par défaut (Fiche de renseignement)
     showTab('fiche-renseignement');
