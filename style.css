@@ -107,29 +107,4 @@ header {
 }
 
 .tab-button {
-    background-color: #00BFFF;  /* Bleu ciel */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 0 2px;
-    transition: background-color 0.3s;
-}
-
-.tab-button:hover {
-    background-color: #008CBA;  /* Légèrement plus foncé au survol */
-}
-
-/* Style des fiches */
-.tab-content {
-    display: none;
-    padding: 20px;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* Style du footer */
-footer {
+    background-color: #00B
