@@ -14,17 +14,64 @@
         </div>
     </header>
     <div class="side-bar">
-        <button class="accordion" onclick="window.location.href='nouvelle-adhesion.html'">Nouvelle adhésion</button>
+        <button class="accordion" onclick="showAdhesionPage()">Nouvelle adhésion</button>
         <input type="text" id="searchBar" placeholder="Rechercher..." style="margin-top: 20px;">
     </div>
     <div id="banner" class="banner" style="display: none;"></div>
-    <div class="tabs" style="display: none;">
+    <div class="tabs">
         <button class="tab-button" onclick="showTab('fiche-renseignement')">Fiche de renseignement</button>
         <button class="tab-button" onclick="showTab('fiche-suivi')">Fiche de suivi</button>
         <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
     </div>
     <main>
-        <!-- Contenu principal -->
+        <section id="fiche-renseignement" class="tab-content">
+            <h2>Fiche de renseignement</h2>
+            <form>
+                <h3>1/ Informations personnelles</h3>
+                <label for="nomPrenom">Nom/Prénom:</label>
+                <input type="text" id="nomPrenom" name="nomPrenom"><br>
+                <label for="dateNaissance">Date de naissance:</label>
+                <input type="date" id="dateNaissance" name="dateNaissance"><br>
+                <label for="sexe">Sexe:</label>
+                <input type="text" id="sexe" name="sexe"><br>
+                <label for="problemeSante">Problème de santé:</label>
+                <input type="text" id="problemeSante" name="problemeSante"><br>
+                <label for="troubleMaladie">Trouble/maladie:</label>
+                <input type="text" id="troubleMaladie" name="troubleMaladie"><br>
+                <label for="fonctionsOrganiques">Fonctions organiques et structures anatomiques:</label>
+                <input type="text" id="fonctionsOrganiques" name="fonctionsOrganiques"><br>
+                <label for="activites">Activités:</label>
+                <input type="text" id="activites" name="activites"><br>
+                <label for="participation">Participation:</label>
+                <input type="text" id="participation" name="participation"><br>
+                <label for="facteursContextuels">Facteurs contextuels:</label>
+                <input type="text" id="facteursContextuels" name="facteursContextuels"><br>
+                <label for="autresInfo">Autres info (contre-indications, points d'attention):</label>
+                <input type="text" id="autresInfo" name="autresInfo"><br>
+                
+                <h3>2/ Rapport à l'APA</h3>
+                <label for="dateArrivee">Date d'arrivée à l'association:</label>
+                <input type="date" id="dateArrivee" name="dateArrivee"><br>
+                <label for="connaissanceSalle">Connaissance salle S.P.O.R.T. ?:</label>
+                <input type="text" id="connaissanceSalle" name="connaissanceSalle"><br>
+                <label for="situationPro">Situation professionnelle:</label>
+                <input type="text" id="situationPro" name="situationPro"><br>
+                <label for="centreReeducation">Centre de rééducation:</label>
+                <input type="text" id="centreReeducation" name="centreReeducation"><br>
+                <label for="passeSportif">Passé sportif:</label>
+                <input type="text" id="passeSportif" name="passeSportif"><br>
+                <label for="pratiqueAPA">Pratique APA avant/maintenant ?:</label>
+                <input type="text" id="pratiqueAPA" name="pratiqueAPA"><br>
+            </form>
+        </section>
+        <section id="fiche-suivi" class="tab-content" style="display:none;">
+            <h2>Fiche de suivi</h2>
+            <!-- Contenu de la fiche de suivi -->
+        </section>
+        <section id="suivi-performances" class="tab-content" style="display:none;">
+            <h2>Suivi des performances</h2>
+            <!-- Contenu de la fiche de suivi des performances -->
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 ANTS S.P.O.R.T. Tous droits réservés.</p>
