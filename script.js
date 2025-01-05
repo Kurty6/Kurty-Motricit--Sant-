@@ -25,4 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelector('.accordion').addEventListener('click', showTabs);
+
+    // Make the "Nouvelle séance" rectangle visible on the homepage
+    document.querySelector('.nouvelle-seance').style.display = 'block';
 });
