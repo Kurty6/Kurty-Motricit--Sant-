@@ -59,16 +59,6 @@ header {
     width: 6cm;
 }
 
-/* Hide the "Nouvelle adhésion" button by default */
-.side-bar .accordion {
-    display: none;
-}
-
-/* Show the "Nouvelle adhésion" button when the sidebar is fully extended */
-.side-bar:hover .accordion {
-    display: block;
-}
-
 /* Style de la barre de recherche */
 .search-bar {
     display: none;
@@ -121,31 +111,18 @@ header {
 .tab-content {
     display: none;
     padding: 20px;
-    margin-left: 3cm; /* Align horizontally 3 cm from the left edge */
 }
 
 .tab-content.active {
     display: block;
-    margin-left: 3cm; /* Align horizontally 3 cm from the left edge */
-}
-
-/* Align the questionnaire 1 cm to the right of the retracted sidebar */
-.form-container {
-    position: absolute;
-    left: calc(2cm + 1cm); /* 2 cm for the sidebar width, plus 1 cm */
-    width: calc(100% - 3cm); /* Adjust width accordingly */
+    margin-left: 2cm; /* Ne pas afficher au centre */
 }
 
 /* Style du footer */
 footer {
-    background-color: #00BFFF; /* Same color as "ANTS S.P.O.R.T" */
+    background-color: #f0f0f0;
     text-align: center;
-    padding: 5px 0; /* Adjust padding to fit within 0.5 cm */
-    position: fixed;
-    bottom: 0; /* Position at the very bottom */
-    height: 0.5cm; /* Set height to 0.5 cm */
-    width: 100%;
-    font-size: 10px; /* Make the text smaller */
+    padding: 10px 0;
 }
 
 /* Nouvelle séance */
