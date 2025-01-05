@@ -3,11 +3,6 @@
 <head>
     <title>ANTS S.P.O.R.T</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        #fiche-renseignement {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -19,46 +14,22 @@
         </div>
     </header>
     <div class="side-bar">
-        <button class="accordion" onclick="showAdhesionPage()">Nouvel adhésion</button>
+        <button class="accordion" onclick="showAdhesionPage()">Nouvelle adhésion</button>
         <input type="text" id="searchBar" placeholder="Rechercher..." style="margin-top: 20px;">
     </div>
-    <div class="tabs">
+    <div id="banner" class="banner" style="display: none;"></div>
+    <div class="tabs" style="display: none;">
         <button class="tab-button" onclick="showTab('fiche-renseignement')">Fiche de renseignement</button>
         <button class="tab-button" onclick="showTab('fiche-suivi')">Fiche de suivi</button>
         <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
     </div>
     <main>
-        <section id="fiche-renseignement" class="tab-content">
-            <h2>Fiche de renseignement</h2>
-            <!-- Contenu de la fiche de renseignement -->
-        </section>
-        <section id="fiche-suivi" class="tab-content" style="display:none;">
-            <h2>Fiche de suivi</h2>
-            <!-- Contenu de la fiche de suivi -->
-        </section>
-        <section id="suivi-performances" class="tab-content" style="display:none;">
-            <h2>Suivi des performances</h2>
-            <!-- Contenu de la fiche de suivi des performances -->
-        </section>
+        <!-- Contenu principal -->
     </main>
     <footer>
         <p>&copy; 2025 ANTS S.P.O.R.T. Tous droits réservés.</p>
     </footer>
     <div class="nouvelle-seance" onclick="window.location.href='nouvelle_seance.html'">Nouvelle séance</div>
     <script src="script.js"></script>
-    <script>
-        function showTab(tabId) {
-            var tabs = document.getElementsByClassName('tab-content');
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].style.display = 'none';
-            }
-            document.getElementById(tabId).style.display = 'block';
-        }
-
-        // Afficher la première tab par défaut (facultatif)
-        document.addEventListener('DOMContentLoaded', function() {
-            showTab('fiche-suivi');
-        });
-    </script>
 </body>
 </html>
