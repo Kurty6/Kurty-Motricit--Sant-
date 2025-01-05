@@ -111,11 +111,12 @@ header {
 .tab-content {
     display: none;
     padding: 20px;
+    margin-left: 3cm; /* Align horizontally 3 cm from the left edge */
 }
 
 .tab-content.active {
     display: block;
-    margin-left: 2cm; /* Ne pas afficher au centre */
+    margin-left: 3cm; /* Align horizontally 3 cm from the left edge */
 }
 
 /* Style du footer */
