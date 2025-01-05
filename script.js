@@ -1,3 +1,7 @@
+function goBack() {
+    window.history.back();
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     function showTabs() {
         document.querySelector('.tabs').style.display = 'flex';
