@@ -14,28 +14,60 @@
         </div>
     </header>
     <div class="side-bar">
-        <button class="accordion" onclick="showAdhesionPage()">Nouvel adhésion</button>
-        <input type="text" id="searchBar" placeholder="Rechercher..." style="margin-top: 20px;">
+        <button class="accordion" onclick="showAdhesionForm()">Nouvelle adhésion</button>
+        <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher..." style="margin-top: 20px;">
+    </div>
+    <div id="adhesionForm" class="mindmap" style="display: none; margin-left: 2cm;">
+        <h2>Fiche de renseignement</h2>
+        <div class="mindmap-section">
+            <h3>Informations Personnelles</h3>
+            <label>Nom :</label> <input type="text"><br>
+            <label>Prénom :</label> <input type="text"><br>
+            <label>Sexe :</label> <input type="text"><br>
+            <label>Date de naissance :</label> <input type="date"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Problème de santé : trouble maladie</h3>
+            <label>Fonctions et structures :</label> <input type="text"><br>
+            <label>Déficiences liées au physique :</label> <input type="text"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Activités</h3>
+            <label>Activités :</label> <input type="text"><br>
+            <label>Restrictions fonctionnelles :</label> <input type="text"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Participation</h3>
+            <label>Possibilités de participations :</label> <input type="text"><br>
+            <label>Restrictions professionnelles et sociales :</label> <input type="text"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Facteurs contextuels</h3>
+            <label>Personnels :</label> <input type="text"><br>
+            <label>Environnementaux :</label> <input type="text"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Autres informations (contre-indications, points d'attention)</h3>
+            <label>Autres informations :</label> <input type="text"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Rapport à l'APA et ANTS</h3>
+            <label>Date d'arrivée à l'association :</label> <input type="date"><br>
+            <label>Connaissance salle S.P.O.R.T. ? :</label> <input type="text"><br>
+            <label>Situation professionnelle :</label> <input type="text"><br>
+            <label>Centre de rééducation :</label> <input type="text"><br>
+            <label>Passé sportif :</label> <input type="text"><br>
+            <label>Pratique APA avant/maintenant ? :</label> <input type="text"><br>
+        </div>
+        <div class="mindmap-section">
+            <h3>Objectifs</h3>
+            <label>Initiaux :</label> <input type="text"><br>
+            <label>Biologique :</label> <input type="text"><br>
+            <label>Psychologique :</label> <input type="text"><br>
+            <label>Social :</label> <input type="text"><br>
+        </div>
     </div>
     <div class="tabs">
         <button class="tab-button" onclick="showTab('fiche-renseignement')">Fiche de renseignement</button>
         <button class="tab-button" onclick="showTab('fiche-suivi')">Fiche de suivi</button>
-        <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
-    </div>
-    <main>
-        <section id="fiche-renseignement" class="tab-content">
-            <h2>Fiche de renseignement</h2>
-            <!-- Contenu de la fiche de renseignement -->
-        </section>
-        <section id="fiche-suivi" class="tab-content" style="display:none;">
-            <h2>Fiche de suivi</h2>
-            <!-- Contenu de la fiche de suivi -->
-        </section>
-        <section id="suivi-performances" class="tab-content" style="display:none;">
-            <h2>Suivi des performances</h2>
-            <!-- Contenu de la fiche de suivi des performances -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 ANTS S.P.O.R.T. Tous droits réservés.</p>
-    </footer
+        <button class="tab-button" onclick="showTab('suivi
