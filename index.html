@@ -13,13 +13,14 @@
             <a href="index.html"><img src="logo-home.png" alt="Retour à l'accueil"></a>
         </div>
     </header>
+    <div class="side-bar">
+        <button class="accordion" onclick="showAdhesionPage()">Nouvel adhésion</button>
+        <input type="text" id="searchBar" placeholder="Rechercher..." style="margin-top: 20px;">
+    </div>
     <div class="tabs">
         <button class="tab-button" onclick="showTab('fiche-renseignement')">Fiche de renseignement</button>
         <button class="tab-button" onclick="showTab('fiche-suivi')">Fiche de suivi</button>
         <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
-    </div>
-    <div class="side-bar">
-        <input type="text" class="search-bar" placeholder="Rechercher...">
     </div>
     <main>
         <section id="fiche-renseignement" class="tab-content">
@@ -37,8 +38,4 @@
     </main>
     <footer>
         <p>&copy; 2025 ANTS S.P.O.R.T. Tous droits réservés.</p>
-    </footer>
-    <div class="nouvelle-seance" onclick="window.location.href='nouvelle_seance.html'">Nouvelle séance</div>
-    <script src="script.js"></script>
-</body>
-</html>
+    </footer
