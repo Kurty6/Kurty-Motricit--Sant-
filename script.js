@@ -42,4 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.tab-button').addEventListener('click', function() {
         showTab('fiche-renseignement');
     });
+
+    // Gestion de la barre de recherche
+    const sideBar = document.querySelector('.side-bar');
+    const searchBar = document.getElementById('searchBar');
+
+    sideBar.addEventListener('mouseover', function() {
+        searchBar.style.display = 'block';
+    });
+
+    sideBar.addEventListener('mouseout', function() {
+        searchBar.style.display = 'none';
+    });
 });
