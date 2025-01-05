@@ -1,147 +1,31 @@
 /* Style général */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; 
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-/* Style du header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    background-color: #f0f0f0;
+    padding: 10px 0;
 }
 
-.header-left h1 {
+header h1 {
     margin: 0;
-    color: #00BFFF;
+    color: #333;
 }
 
-.header-right img {
-    height: 2cm;
-    cursor: pointer;
-}
-
-/* Style de la barre rétractable */
-.side-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 2cm;
-    height: 100%;
-    background-color: #00BFFF;
-    overflow: hidden;
-    transition: width 0.3s;
-    z-index: 2;
-}
-
-.side-bar:hover {
-    width: 6cm;
-}
-
-/* Style de la barre de recherche */
-.search-bar {
-    display: none;
-    width: calc(100% - 20px);
-    margin: 50px 10px 10px 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.side-bar:hover .search-bar {
-    display: block;
-}
-
-/* Style des boutons de la barre rétractable */
-.accordion {
-    background-color: #00BFFF;
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    text-align: left;
-    outline: none;
-    font-size: 14px;
-}
-
-/* Style des boutons d'onglets */
-.tabs {
-    display: flex;
-    margin-left: 2cm;
-    background-color: #00BFFF;
-}
-
-.tab-button {
-    background-color: #00BFFF;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 0 2px;
-    transition: background-color 0.3s;
-}
-
-.tab-button:hover {
-    background-color: #008CBA;
-}
-
-/* Style des fiches */
-.tab-content {
-    display: none;
+main {
     padding: 20px;
 }
 
-.tab-content.active {
-    display: block;
-    margin-left: 2cm;
-}
-
-/* Style du formulaire */
-.form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-container label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-container button {
-    padding: 10px 20px;
-    background-color: #00BFFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.form-container button:hover {
-    background-color: #008CBA;
-}
-
-/* Style du footer */
 footer {
     background-color: #f0f0f0;
-    text-align: center;
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
