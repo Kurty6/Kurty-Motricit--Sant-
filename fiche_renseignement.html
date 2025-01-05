@@ -11,15 +11,23 @@
         </div>
         <div class="header-right">
             <a href="index.html"><img src="logo-home.png" alt="Retour à l'accueil"></a>
+            <button onclick="goBack()">Retour</button>
         </div>
     </header>
     <div class="side-bar">
-        <input type="text" class="search-bar" placeholder="Rechercher...">
+        <button class="accordion" onclick="showTabs()">Nouvelle adhésion</button>
+        <input type="text" id="searchBar" placeholder="Rechercher..." class="search-bar">
         <div class="nav-links">
             <a href="fiche_renseignement.html">Fiche de renseignement</a>
             <a href="fiche_suivi.html">Fiche de suivi</a>
             <a href="suivi_performances.html">Suivi des performances</a>
         </div>
+    </div>
+    <div id="banner" class="banner" style="display: none;"></div>
+    <div class="tabs" style="display: none;">
+        <button class="tab-button" onclick="window.location.href='fiche_renseignement.html'">Fiche de renseignement</button>
+        <button class="tab-button" onclick="window.location.href='fiche_suivi.html'">Fiche de suivi</button>
+        <button class="tab-button" onclick="window.location.href='suivi_performances.html'">Suivi des performances</button>
     </div>
     <main>
         <!-- Contenu de la page de renseignement -->
@@ -27,5 +35,51 @@
     <footer>
         <p>&copy; 2025 ANTS S.P.O.R.T. Tous droits réservés.</p>
     </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function showTabs() {
+                document.querySelector('.tabs').style.display = 'flex';
+                document.querySelector('.nouvelle-seance').style.display = 'block';
+                showBanner("Nouvelle adhésion");
+            }
+
+            function showBanner(text) {
+                const banner = document.getElementById('banner');
+                banner.innerHTML = `
+                    <input type="text" id="searchBar" placeholder="Rechercher..." class="search-bar">
+                    <button class="accordion" onclick="showTabs()">Nouvelle adhésion</button>
+                `;
+                banner.style.display = 'block';
+            }
+
+            function handleSearchAndRedirect(query) {
+                if (query === "Nom de l'adhérant") {
+                    showBanner(query);
+                    window.location.href = 'memberPage.html';
+                }
+            }
+
+            document.getElementById('searchBar').addEventListener('input', function() {
+                handleSearchAndRedirect(this.value);
+            });
+
+            document.querySelector('.accordion').addEventListener('click', function() {
+                window.location.href = 'fiche_suivi.html';
+            });
+
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelector('.tabs').style.display = 'flex';
+                    document.querySelector('.banner').style.display = 'block';
+                });
+            });
+
+            document.querySelector('.nouvelle-seance').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
