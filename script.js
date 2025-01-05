@@ -9,10 +9,22 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById(tabId).style.display = 'block';
     }
 
+    function showAdhesionPage() {
+        document.querySelector('.tabs').style.display = 'flex';
+        showBanner("Nouvelle adhésion");
+    }
+
+    function showBanner(text) {
+        const banner = document.getElementById('banner');
+        banner.textContent = text;
+        banner.style.display = 'block';
+    }
+
     function handleSearchAndRedirect(query) {
         // Logique pour rechercher et rediriger vers la page de l'adhérant
         // Exemple : Si le nom correspond à un adhérant
         if (query === "Nom de l'adhérant") {
+            showBanner(query);
             window.location.href = 'memberPage.html';
         }
     }
@@ -22,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelector('.accordion').addEventListener('click', function() {
-        window.location.href = 'memberPage.html';
+        showAdhesionPage();
     });
 
     // Afficher l'onglet par défaut (Fiche de renseignement)
