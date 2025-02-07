@@ -86,8 +86,26 @@ footer p {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    width: 300px;
+    width: 90%; /* Landscape orientation */
     text-align: center;
+    position: relative;
+}
+
+.overlay-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.overlay-table th,
+.overlay-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.overlay-table th {
+    background-color: #f2f2f2;
 }
 
 .close-btn {
@@ -95,12 +113,6 @@ footer p {
     top: 10px;
     right: 10px;
     cursor: pointer;
-}
-
-.days th {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: black;
 }
 /* Style de la banderolle rétractable */
 .side-bar {
