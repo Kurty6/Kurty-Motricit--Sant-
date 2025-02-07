@@ -14,46 +14,17 @@
     <div class="side-bar">
         <div class="vertical-tabs">
             <button class="tab-button" onclick="showTab('presentation')">Présentation de la structure</button>
-            <button class="tab-button" id="adherents-tab" onclick="showTab('adherents')">Adhérents</button>
-            <button class="tab-button" onclick="showTab('fiches-suivi')">Fiches de suivi</button>
-            <button class="tab-button" onclick="showTab('seances-types')">Séances types</button>
+            <button class="tab-button" onclick="showTab('calendrier')">Calendrier</button>
+            <button class="tab-button" onclick="showTab('adherents')">Adhérents</button>
+            <button class="tab-button" onclick="showTab('nouvelle-seance')">Nouvelle séance</button>
             <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
         </div>
     </div>
     <main>
         <button class="back-btn" onclick="goBack()">&#x21A9;</button>
-        <h2 id="main-title">Calendrier des sports</h2>
+        <h2 id="main-title">Bienvenue</h2>
         <div id="content">
-            <!-- Existing calendar code -->
-        </div>
-        <div class="table-container" id="adherents-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Numéro de tél</th>
-                        <th>Email</th>
-                        <th>Date de naissance</th>
-                        <th>Adresse</th>
-                        <th>Ville</th>
-                        <th>Contact urgence</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="add-row-btn">+</div>
+            <!-- Content will be loaded here based on the tab clicked -->
         </div>
     </main>
     <footer>
