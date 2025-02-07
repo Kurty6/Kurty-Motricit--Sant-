@@ -21,26 +21,43 @@
     <main>
     <!-- Main content goes here -->
     <h2>Calendrier des sports</h2>
-    <div class="calendar">
-        <div class="days">
-            <div class="day" style="background-color: rgba(255, 0, 0, 0.2);">Lundi</div>
-            <div class="day" style="background-color: rgba(255, 165, 0, 0.2);">Mardi</div>
-            <div class="day" style="background-color: rgba(255, 255, 0, 0.2);">Mercredi</div>
-            <div class="day" style="background-color: rgba(0, 128, 0, 0.2);">Jeudi</div>
-            <div class="day" style="background-color: rgba(0, 0, 255, 0.2);">Vendredi</div>
-            <div class="day" style="background-color: rgba(75, 0, 130, 0.2);">Samedi</div>
-        </div>
-        <div class="hours">
-            <div>9h</div>
-            <div>10h</div>
-            <div>11h</div>
-            <div>12h</div>
-            <div>13h</div>
-            <div>14h</div>
-            <div>15h</div>
-            <div>16h</div>
-            <div>17h</div>
-            <div>18h</div>
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>Heures</th>
+                <th style="background-color: rgba(255, 0, 0, 0.2);">Lundi</th>
+                <th style="background-color: rgba(255, 165, 0, 0.2);">Mardi</th>
+                <th style="background-color: rgba(255, 255, 0, 0.2);">Mercredi</th>
+                <th style="background-color: rgba(0, 128, 0, 0.2);">Jeudi</th>
+                <th style="background-color: rgba(0, 0, 255, 0.2);">Vendredi</th>
+                <th style="background-color: rgba(75, 0, 130, 0.2);">Samedi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9h</td>
+                <td class="cell" data-day="Lundi" data-hour="9h"></td>
+                <td class="cell" data-day="Mardi" data-hour="9h"></td>
+                <td class="cell" data-day="Mercredi" data-hour="9h"></td>
+                <td class="cell" data-day="Jeudi" data-hour="9h"></td>
+                <td class="cell" data-day="Vendredi" data-hour="9h"></td>
+                <td class="cell" data-day="Samedi" data-hour="9h"></td>
+            </tr>
+            <!-- Repeat rows for each hour -->
+            <tr>
+                <td>12h</td>
+                <td colspan="6" class="merged">Pause déjeuner</td>
+            </tr>
+            <!-- Continue rows for each hour -->
+        </tbody>
+    </table>
+
+    <!-- Overlay page -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="closeOverlay()">&times;</span>
+            <h3 id="overlay-title"></h3>
+            <!-- Additional content can be added here -->
         </div>
     </div>
 </main>
