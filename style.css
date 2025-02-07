@@ -326,3 +326,17 @@ footer p {
 .form-container button:hover {
     background-color: #008CBA;
 }
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.home-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Other styles remain unchanged */
