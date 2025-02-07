@@ -339,4 +339,99 @@ footer p {
     cursor: pointer;
 }
 
+.back-btn {
+    display: none;
+    border: none;
+    background: none;
+    color: #00BFFF;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-btn::before {
+    content: "\2190";
+    border: 2px solid #00BFFF;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    background-color: #00BFFF;
+    overflow: hidden;
+    transition: width 0.3s;
+    z-index: 2;
+}
+
+.side-bar:hover {
+    width: 200px;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00BFFF;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.side-bar:hover .tab-button {
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.tab-button:hover {
+    background-color: #008CBA;
+}
+
+.tab-button::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.tab-button:nth-child(1)::before {
+    background-image: url('presentation-icon.png');
+}
+
+.tab-button:nth-child(2)::before {
+    background-image: url('pratiquants-icon.png');
+}
+
+.tab-button:nth-child(3)::before {
+    background-image: url('fiches-suivi-icon.png');
+}
+
+.tab-button:nth-child(4)::before {
+    background-image: url('seances-types-icon.png');
+}
+
+.tab-button:nth-child(5)::before {
+    background-image: url('suivi-performances-icon.png');
+}
+
+/* Other styles remain unchanged */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 /* Other styles remain unchanged */
