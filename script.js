@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.querySelectorAll(".cell").forEach(cell => {
+        cell.addEventListener("click", function(event) {
+            event.preventDefault();
+            const day = cell.getAttribute("data-day");
+            const hour = cell.getAttribute("data-hour");
+            showOverlay(day, hour);
+        });
+
         cell.addEventListener("contextmenu", function(event) {
             event.preventDefault();
             const day = cell.getAttribute("data-day");
