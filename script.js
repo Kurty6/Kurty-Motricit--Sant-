@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function showTab(tabId) {
-        document.querySelector(".table-container").style.display = "none"; // Hide the table container initially
+        document.querySelector(".table-container").style.display = "none"; // Hide all table containers initially
         if (tabId === 'adherents') {
-            document.querySelector(".table-container").style.display = "block";
-            document.getElementById("content").innerHTML = '';
+            document.getElementById("adherents-container").style.display = "block";
+            document.getElementById("main-title").textContent = "Adhérents";
+            document.getElementById("content").style.display = "none";
         } else {
             document.getElementById("main-title").textContent = tabId;
             document.getElementById("content").innerHTML = `<p>Content for ${tabId}</p>`;
+            document.getElementById("content").style.display = "block";
         }
         document.querySelector(".back-btn").style.display = "block";
     }
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function goBack() {
         document.getElementById("main-title").textContent = "Calendrier des sports";
         document.getElementById("content").innerHTML = document.querySelector(".calendar").outerHTML;
+        document.getElementById("content").style.display = "block";
         document.querySelector(".back-btn").style.display = "none";
         document.querySelector(".table-container").style.display = "none";
     }
@@ -32,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function goHome() {
         document.getElementById("main-title").textContent = "Calendrier des sports";
         document.getElementById("content").innerHTML = document.querySelector(".calendar").outerHTML;
+        document.getElementById("content").style.display = "block";
         document.querySelector(".back-btn").style.display = "none";
         document.querySelector(".table-container").style.display = "none";
     }
