@@ -7,163 +7,166 @@
 <body>
     <header>
         <div class="header-left">
-            <img src="dumbbell-icon.png" alt="Accueil" class="home-icon" onclick="window.location.href='index.html'">
+            <img src="dumbbell-icon.png" alt="Accueil" class="home-icon" onclick="goHome()">
             <h1>Kurty Motricity Healthy Sport</h1>
         </div>
     </header>
     <div class="side-bar">
         <div class="vertical-tabs">
-            <button class="tab-button" onclick="showPresentation()">Présentation de la structure</button>
-            <button class="tab-button" onclick="showPratiquants()">Pratiquants</button>
-            <button class="tab-button" onclick="showFichesSuivi()">Fiches de suivi</button>
-            <button class="tab-button" onclick="showSeancesTypes()">Séances types</button>
-            <button class="tab-button" onclick="showSuiviPerformances()">Suivi des performances</button>
+            <button class="tab-button" onclick="showTab('presentation')">Présentation de la structure</button>
+            <button class="tab-button" onclick="showTab('pratiquants')">Pratiquants</button>
+            <button class="tab-button" onclick="showTab('fiches-suivi')">Fiches de suivi</button>
+            <button class="tab-button" onclick="showTab('seances-types')">Séances types</button>
+            <button class="tab-button" onclick="showTab('suivi-performances')">Suivi des performances</button>
         </div>
     </div>
     <main>
-    <!-- Main content goes here -->
-    <h2>Calendrier des sports</h2>
-    <table class="calendar">
-        <thead>
-            <tr>
-                <th>Heures</th>
-                <th style="background-color: rgba(255, 0, 0, 0.2);">Lundi</th>
-                <th style="background-color: rgba(255, 165, 0, 0.2);">Mardi</th>
-                <th style="background-color: rgba(255, 255, 0, 0.2);">Mercredi</th>
-                <th style="background-color: rgba(0, 128, 0, 0.2);">Jeudi</th>
-                <th style="background-color: rgba(0, 0, 255, 0.2);">Vendredi</th>
-                <th style="background-color: rgba(75, 0, 130, 0.2);">Samedi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>9h</td>
-                <td class="cell" data-day="Lundi" data-hour="9h"></td>
-                <td class="cell" data-day="Mardi" data-hour="9h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="9h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="9h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="9h"></td>
-                <td class="cell" data-day="Samedi" data-hour="9h"></td>
-            </tr>
-            <tr>
-                <td>10h</td>
-                <td class="cell" data-day="Lundi" data-hour="10h"></td>
-                <td class="cell" data-day="Mardi" data-hour="10h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="10h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="10h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="10h"></td>
-                <td class="cell" data-day="Samedi" data-hour="10h"></td>
-            </tr>
-            <tr>
-                <td>11h</td>
-                <td class="cell" data-day="Lundi" data-hour="11h"></td>
-                <td class="cell" data-day="Mardi" data-hour="11h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="11h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="11h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="11h"></td>
-                <td class="cell" data-day="Samedi" data-hour="11h"></td>
-            </tr>
-            <tr>
-                <td>12h</td>
-                <td colspan="6" class="merged">Pause déjeuner</td>
-            </tr>
-            <tr>
-                <td>13h</td>
-                <td class="cell" data-day="Lundi" data-hour="13h"></td>
-                <td class="cell" data-day="Mardi" data-hour="13h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="13h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="13h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="13h"></td>
-                <td class="cell" data-day="Samedi" data-hour="13h"></td>
-            </tr>
-            <tr>
-                <td>14h</td>
-                <td class="cell" data-day="Lundi" data-hour="14h"></td>
-                <td class="cell" data-day="Mardi" data-hour="14h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="14h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="14h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="14h"></td>
-                <td class="cell" data-day="Samedi" data-hour="14h"></td>
-            </tr>
-            <tr>
-                <td>15h</td>
-                <td class="cell" data-day="Lundi" data-hour="15h"></td>
-                <td class="cell" data-day="Mardi" data-hour="15h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="15h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="15h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="15h"></td>
-                <td class="cell" data-day="Samedi" data-hour="15h"></td>
-            </tr>
-            <tr>
-                <td>16h</td>
-                <td class="cell" data-day="Lundi" data-hour="16h"></td>
-                <td class="cell" data-day="Mardi" data-hour="16h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="16h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="16h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="16h"></td>
-                <td class="cell" data-day="Samedi" data-hour="16h"></td>
-            </tr>
-            <tr>
-                <td>17h</td>
-                <td class="cell" data-day="Lundi" data-hour="17h"></td>
-                <td class="cell" data-day="Mardi" data-hour="17h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="17h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="17h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="17h"></td>
-                <td class="cell" data-day="Samedi" data-hour="17h"></td>
-            </tr>
-            <tr>
-                <td>18h</td>
-                <td class="cell" data-day="Lundi" data-hour="18h"></td>
-                <td class="cell" data-day="Mardi" data-hour="18h"></td>
-                <td class="cell" data-day="Mercredi" data-hour="18h"></td>
-                <td class="cell" data-day="Jeudi" data-hour="18h"></td>
-                <td class="cell" data-day="Vendredi" data-hour="18h"></td>
-                <td class="cell" data-day="Samedi" data-hour="18h"></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Overlay page -->
-    <div id="overlay" class="overlay">
-        <div class="overlay-content">
-            <span class="close-btn" onclick="closeOverlay()">&times;</span>
-            <h3 id="overlay-title"></h3>
-            <table class="overlay-table">
+        <button class="back-btn" onclick="goBack()">&#x21A9;</button>
+        <!-- Main content goes here -->
+        <h2 id="main-title">Calendrier des sports</h2>
+        <div id="content">
+            <table class="calendar">
                 <thead>
                     <tr>
-                        <th>Activité</th>
-                        <th>Musculation</th>
-                        <th>Circuit training</th>
-                        <th>Muscu auto</th>
-                        <th>Kiné</th>
-                        <th>Psychomot</th>
-                        <th>Ostéo</th>
+                        <th>Heures</th>
+                        <th style="background-color: rgba(255, 0, 0, 0.2);">Lundi</th>
+                        <th style="background-color: rgba(255, 165, 0, 0.2);">Mardi</th>
+                        <th style="background-color: rgba(255, 255, 0, 0.2);">Mercredi</th>
+                        <th style="background-color: rgba(0, 128, 0, 0.2);">Jeudi</th>
+                        <th style="background-color: rgba(0, 0, 255, 0.2);">Vendredi</th>
+                        <th style="background-color: rgba(75, 0, 130, 0.2);">Samedi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>A2</td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td rowspan="2" contenteditable="true"></td>
+                        <td>9h</td>
+                        <td class="cell" data-day="Lundi" data-hour="9h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="9h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="9h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="9h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="9h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="9h"></td>
                     </tr>
                     <tr>
-                        <td>A3</td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
-                        <td contenteditable="true"></td>
+                        <td>10h</td>
+                        <td class="cell" data-day="Lundi" data-hour="10h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="10h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="10h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="10h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="10h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="10h"></td>
+                    </tr>
+                    <tr>
+                        <td>11h</td>
+                        <td class="cell" data-day="Lundi" data-hour="11h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="11h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="11h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="11h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="11h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="11h"></td>
+                    </tr>
+                    <tr>
+                        <td>12h</td>
+                        <td colspan="6" class="merged">Pause déjeuner</td>
+                    </tr>
+                    <tr>
+                        <td>13h</td>
+                        <td class="cell" data-day="Lundi" data-hour="13h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="13h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="13h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="13h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="13h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="13h"></td>
+                    </tr>
+                    <tr>
+                        <td>14h</td>
+                        <td class="cell" data-day="Lundi" data-hour="14h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="14h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="14h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="14h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="14h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="14h"></td>
+                    </tr>
+                    <tr>
+                        <td>15h</td>
+                        <td class="cell" data-day="Lundi" data-hour="15h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="15h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="15h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="15h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="15h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="15h"></td>
+                    </tr>
+                    <tr>
+                        <td>16h</td>
+                        <td class="cell" data-day="Lundi" data-hour="16h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="16h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="16h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="16h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="16h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="16h"></td>
+                    </tr>
+                    <tr>
+                        <td>17h</td>
+                        <td class="cell" data-day="Lundi" data-hour="17h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="17h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="17h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="17h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="17h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="17h"></td>
+                    </tr>
+                    <tr>
+                        <td>18h</td>
+                        <td class="cell" data-day="Lundi" data-hour="18h"></td>
+                        <td class="cell" data-day="Mardi" data-hour="18h"></td>
+                        <td class="cell" data-day="Mercredi" data-hour="18h"></td>
+                        <td class="cell" data-day="Jeudi" data-hour="18h"></td>
+                        <td class="cell" data-day="Vendredi" data-hour="18h"></td>
+                        <td class="cell" data-day="Samedi" data-hour="18h"></td>
                     </tr>
                 </tbody>
             </table>
+
+            <!-- Overlay page -->
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <span class="close-btn" onclick="closeOverlay()">&times;</span>
+                    <h3 id="overlay-title"></h3>
+                    <table class="overlay-table">
+                        <thead>
+                            <tr>
+                                <th>Activité</th>
+                                <th>Musculation</th>
+                                <th>Circuit training</th>
+                                <th>Muscu auto</th>
+                                <th>Kiné</th>
+                                <th>Psychomot</th>
+                                <th>Ostéo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A2</td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td rowspan="2" contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td>A3</td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
     <footer>
         <p>&copy; 2025 ANTS S.P.O.R.T TOOL. Tous droits réservés.</p>
     </footer>
