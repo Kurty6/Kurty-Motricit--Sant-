@@ -48,48 +48,42 @@ footer p {
 .side-bar {
     position: fixed;
     top: 0;
-    bottom: 0; /* Descend jusqu'en bas de la page */
+    bottom: 0;
     left: 0;
-    width: 1.5cm; /* Largeur de la banderolle rétractée */
+    width: 200px; /* Fixed width for vertical tabs */
     background-color: #00BFFF; /* Bleu ciel */
     overflow: hidden;
-    transition: width 0.3s;
     z-index: 2;
 }
 
-.side-bar:hover {
-    width: 6.5cm; /* Largeur lorsqu'elle est agrandie */
+.vertical-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.search-bar {
-    display: none; /* Cacher par défaut */
-    width: calc(100% - 20px);
-    margin: 1.5cm 10px 0 10px; /* Position de la barre de recherche */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-align: center; /* Centrer dans la barre */
-}
-
-.side-bar:hover .search-bar {
-    display: block; /* Afficher lorsqu'elle est agrandie */
-}
-
-.accordion {
-    display: none; /* Cacher par défaut */
+.tab-button {
     background-color: #00BFFF;
     border: none;
     color: white;
-    padding: 10px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 100%;
     cursor: pointer;
-    text-align: left;
-    outline: none;
-    font-size: 14px;
-    margin-top: 1.5cm; /* Position par rapport à la barre de recherche */
+    transition: background-color 0.3s;
 }
 
-.side-bar:hover .accordion {
-    display: block; /* Afficher lorsqu'elle est agrandie */
+.tab-button:hover {
+    background-color: #008CBA;
+}
+
+/* Ensuring main content doesn't overlap with sidebar */
+main {
+    margin-left: 200px; /* Same width as the sidebar */
+    padding: 20px;
 }
 
 /* Style du formulaire */
