@@ -414,7 +414,7 @@ footer p {
 }
 
 .tab-button:nth-child(2)::before {
-    background-image: url('pratiquants-icon.png');
+    background-image: url('adherents-icon.png');
 }
 
 .tab-button:nth-child(3)::before {
@@ -429,9 +429,31 @@ footer p {
     background-image: url('suivi-performances-icon.png');
 }
 
-/* Other styles remain unchanged */
-    margin-right: 10px;
-    cursor: pointer;
+.table-container {
+    display: none;
+    padding: 20px;
 }
 
-/* Other styles remain unchanged */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+}
+
+.add-row-btn {
+    cursor: pointer;
+    color: #00BFFF;
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
