@@ -1,41 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function showTab(tabId) {
-        document.getElementById("content").innerHTML = '';
-        document.querySelectorAll(".table-container").forEach(container => container.style.display = "none");
-        if (tabId === 'calendrier') {
-            document.getElementById("main-title").textContent = "Emploi du temps des disciplines";
-            document.getElementById("content").innerHTML = document.querySelector(".calendar").outerHTML;
-        } else if (tabId === 'adherents') {
-            document.getElementById("main-title").textContent = "Fiche de contact";
-            document.getElementById("adherents-container").style.display = "block";
-        } else {
-            document.getElementById("main-title").textContent = tabId;
-            document.getElementById("content").innerHTML = `<p>Content for ${tabId}</p>`;
-        }
+    function showOverlay(day, hour) {
+        const overlay = document.getElementById("overlay");
+        const overlayTitle = document.getElementById("overlay-title");
+        overlayTitle.textContent = `${day} - ${hour}`;
+        overlay.style.display = "flex";
     }
 
-    function goBack() {
-        document.getElementById("main-title").textContent = "Bienvenue";
-        document.getElementById("content").innerHTML = '';
-        document.querySelectorAll(".table-container").forEach(container => container.style.display = "none");
+    function closeOverlay() {
+        document.getElementById("overlay").style.display = "none";
     }
 
-    function goHome() {
-        document.getElementById("main-title").textContent = "Bienvenue";
-        document.getElementById("content").innerHTML = '';
-        document.querySelectorAll(".table-container").forEach(container => container.style.display = "none");
-    }
+    document.querySelectorAll(".cell").forEach(cell => {
+        cell.addEventListener("click", function(event) {
+            event.preventDefault();
+            const day = cell.getAttribute("data-day");
+            const hour = cell.getAttribute("data-hour");
+            showOverlay(day, hour);
+        });
 
-    function addRow() {
-        const table = document.querySelector(".table-container table tbody");
-        const newRow = document.createElement("tr");
-        for (let i = 0; i < 8; i++) {
-            const cell = document.createElement("td");
-            cell.contentEditable = "true";
-            newRow.appendChild(cell);
-        }
-        table.appendChild(newRow);
-    }
+        cell.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            const day = cell.getAttribute("data-day");
+            const hour = cell.getAttribute("data-hour");
+            showOverlay(day, hour);
+        });
+    });
 
-    document.querySelector(".add-row-btn").addEventListener("click", addRow);
+    document.querySelector(".close-btn").addEventListener("click", closeOverlay);
 });
