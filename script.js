@@ -11,8 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function showTab(tabId) {
-        document.getElementById("main-title").textContent = tabId;
-        document.getElementById("content").innerHTML = `<p>Content for ${tabId}</p>`;
+        document.querySelector(".table-container").style.display = "none"; // Hide the table container initially
+        if (tabId === 'adherents') {
+            document.querySelector(".table-container").style.display = "block";
+            document.getElementById("content").innerHTML = '';
+        } else {
+            document.getElementById("main-title").textContent = tabId;
+            document.getElementById("content").innerHTML = `<p>Content for ${tabId}</p>`;
+        }
         document.querySelector(".back-btn").style.display = "block";
     }
 
@@ -20,12 +26,25 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("main-title").textContent = "Calendrier des sports";
         document.getElementById("content").innerHTML = document.querySelector(".calendar").outerHTML;
         document.querySelector(".back-btn").style.display = "none";
+        document.querySelector(".table-container").style.display = "none";
     }
 
     function goHome() {
         document.getElementById("main-title").textContent = "Calendrier des sports";
         document.getElementById("content").innerHTML = document.querySelector(".calendar").outerHTML;
         document.querySelector(".back-btn").style.display = "none";
+        document.querySelector(".table-container").style.display = "none";
+    }
+
+    function addRow() {
+        const table = document.querySelector(".table-container table tbody");
+        const newRow = document.createElement("tr");
+        for (let i = 0; i < 8; i++) {
+            const cell = document.createElement("td");
+            cell.contentEditable = "true";
+            newRow.appendChild(cell);
+        }
+        table.appendChild(newRow);
     }
 
     document.querySelectorAll(".cell").forEach(cell => {
@@ -45,4 +64,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelector(".close-btn").addEventListener("click", closeOverlay);
+    document.querySelector(".add-row-btn").addEventListener("click", addRow);
 });
